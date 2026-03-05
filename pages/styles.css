@@ -1,0 +1,308 @@
+/* OBS. Tenho noção que o CSS está aglomerado, mas deixei assim para o primeiro trabalho enquanto focava em aprender sobre */
+
+/* Fontes importadas */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilização geral */
+
+body {
+  background-color: #ffffff;
+  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 1) 25%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+/* Estilização da área de navegação */
+
+#titulo {
+  justify-content: center;
+  display: flex;
+  margin-top: 80px;
+  font-family: "Montserrat";
+}
+
+#subtitulo {
+  justify-content: center;
+  display: flex;
+  margin-top: 12px;
+  margin-bottom: 28px;
+  font-family: "Inter";
+
+}
+
+/* Estilização Sobre */
+
+.apresentacao-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.foto-perfil {
+  width: 350px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .apresentacao-container {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .foto-perfil {
+    width: 80%;
+  }
+}
+
+/* Estilização do Início */
+.inicio {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.container {
+  justify-content: center;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 5%;
+}
+
+.container h1 {
+  font-family: "Montserrat Extrabold";
+  font-size: 60px;
+}
+
+.container p {
+  font-family: "Inter ExtraThin", sans-serif;
+  font-size: 28px;
+}
+
+.bloco-preto {
+  background-color: black;
+  color: white;
+  padding: 60px;
+  min-width: 420px;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 10%;
+
+}
+
+.texto-lateral {
+  font-family: "Inter", sans-serif;
+  word-wrap: break-word;
+  max-width: 400px;
+  padding: 60px 0;
+}
+
+.inicio p:hover {
+  transform: scale(1.05);
+}
+
+/* Estilização do Cards do site */
+
+.caixa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 160px;
+}
+
+.card {
+  flex: 1 1 calc(50% - 20px);
+  min-width: 250px;
+  max-width: calc(50% - 20px);
+  background-color: #000000;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.card h3 {
+  font-family: "Montserrat";
+  margin-top: 0;
+  color: #333;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #e9e9e9;
+}
+
+.card p {
+  font-family: "Inter";
+  color: #666;
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.icon-card {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-projeto {
+  flex: 1 1 calc(100% - 20px);
+  min-width: 250px;
+  max-width: calc(100% - 20px);
+  background-color: #000000;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.card-projeto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #e9e9e9;
+}
+
+.card-projeto p {
+  font-family: "Inter";
+  color: #666;
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.card-projeto h1 {
+  font-family: "Montserrat";
+  margin-top: 0;
+  color: #333;
+}
+
+
+/* Header */
+
+.creative-header {
+  font-family: "Montserrat Thin";
+  margin: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 28px 28px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-nav ul li {
+  margin-left: 25px;
+  position: relative;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 15px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.main-nav ul li a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-nav ul li a:hover::before {
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 2px;
+}
+
+.creative-header::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: radial-gradient();
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .creative-header {
+    flex-wrap: nowrap;
+    padding: 10px 20px;
+  }
+
+  .main-nav ul {
+    flex-wrap: nowrap;
+  }
+
+  .main-nav ul li {
+    margin-left: 15px;
+  }
+
+  .main-nav ul li a {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  color: #ffffff;
+}
+
+#footer_content {
+  background: rgb(0, 0, 0);
+  padding: 3rem 3.5rem;
+  font-family: "Inter", sans-serif;
+}
+
+#footer_content p {
+  margin-bottom: 20px;
+}
