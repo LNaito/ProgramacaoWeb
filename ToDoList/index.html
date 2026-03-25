@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <h1>To-Do List</h1>
+        <hr class="divider">
+
+        <section class="form-section">
+            <h3>Nova tarefa</h3>
+            <form id="todo-form" class="input-group">
+                <input type="text" id="task-name" placeholder="Nome da tarefa" required>
+                
+                <div class="row">
+                    <select id="task-category">
+                        <option value="Trabalho">Trabalho</option>
+                        <option value="Estudos">Estudos</option>
+                        <option value="Pessoal">Pessoal</option>
+                    </select>
+                    
+                    <select id="task-priority">
+                        <option value="Alta">Alta</option>
+                        <option value="Media">Média</option>
+                        <option value="Baixa">Baixa</option>
+                    </select>
+                </div>
+
+                <input type="date" id="task-date" required>
+                <button  type="submit" class="btn-main">Adicionar Tarefa</button>
+            </form>
+        </section>
+
+        <hr class="divider">
+
+        <section class="filter-section">
+            <div class="row">
+                <div>
+                    <label>Filtrar:</label>
+                    <select id="filter-category">
+                        <option value="Todos">Todas</option>
+                        <option value="Trabalho">Trabalho</option>
+                        <option value="Estudos">Estudos</option>
+                        <option value="Pessoal">Pessoal</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Ordem:</label>
+                    <select id="sort-order">
+                        <option value="data">Data</option>
+                        <option value="prioridade">Prioridade</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <div id="tasks-container" class="tasks-list"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

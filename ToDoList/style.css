@@ -1,0 +1,99 @@
+:root {
+    --primary-color: #ffb82b; /* Amarelo da sua imagem */
+    --bg-body: #f7e2b3;
+    --bg-card: #fdfdfd;
+    --text-dark: #333;
+    --danger: #ff4d4d;
+    --warning: #ffb82b;
+    --success: #2ecc71;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-body);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.app-container {
+    background: #eeeeee;
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+h1 { text-align: center; color: var(--text-dark); margin-bottom: 10px; }
+
+.divider { border: 0.5px solid #ccc; margin: 20px 0; }
+
+.input-group { display: flex; flex-direction: column; gap: 12px; }
+
+.row { display: flex; gap: 10px; }
+.row select { flex: 1; }
+
+input, select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn-main {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.2s;
+}
+
+.btn-main:hover { background-color: #e0a226; transform: translateY(-2px); }
+
+/* Estilo dos Cards Expostos */
+.tasks-list { margin-top: 20px; display: flex; flex-direction: column; gap: 15px; }
+
+.task-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 8px solid #ccc;
+    transition: 0.3s;
+}
+
+/* Cores por Prioridade */
+.priority-Alta { border-left-color: var(--danger); }
+.priority-Media { border-left-color: var(--warning); }
+.priority-Baixa { border-left-color: var(--success); }
+
+.task-info h4 { margin: 0; font-size: 18px; color: #222; }
+.task-info p { margin: 4px 0 0; font-size: 13px; color: #666; }
+
+.task-actions { display: flex; gap: 8px; }
+
+.btn-action {
+    background: var(--primary-color);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.completed {
+    opacity: 0.5;
+    text-decoration: line-through;
+    filter: grayscale(1);
+}
